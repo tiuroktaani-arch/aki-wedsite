@@ -6,18 +6,6 @@
     <title>Aligned Layout</title>
 
 <style>
-    @media screen and (orientation: portrait) {
-    body {
-        transform: rotate(90deg);
-        transform-origin: left top;
-        width: 100vh;
-        height: 100vw;
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
     body {
         background-image: url("back.png");
         background-size: cover;
@@ -25,6 +13,20 @@
         text-align: center;
         margin: 0;
         padding: 20px;
+    }
+
+    /* FORCE LANDSCAPE ON MOBILE */
+    @media screen and (orientation: portrait) {
+        body {
+            transform: rotate(90deg);
+            transform-origin: left top;
+            width: 100vh;
+            height: 100vw;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
     /* Main grid */
@@ -36,7 +38,6 @@
         place-items: center;
     }
 
-    /* Responsive images */
     .pic {
         width: 100%;
         max-width: 200px;
@@ -53,41 +54,11 @@
         object-fit: contain;
     }
 
-    /* Floating effect */
+    /* Floating animation */
     @keyframes float {
         0% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
         100% { transform: translateY(0); }
-    }
-
-    /* MOBILE FIXES */
-    @media (max-width: 768px) {
-        .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .pic {
-            max-width: 150px;
-        }
-
-        .arrow {
-            max-width: 80px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .grid {
-            grid-template-columns: 1fr;
-        }
-
-        .pic {
-            max-width: 200px;
-        }
-
-        .arrow {
-            max-width: 70px;
-        }
     }
 </style>
 </head>
@@ -120,5 +91,5 @@
 </div>
 
 </body>
-
+</html>
 </html>
