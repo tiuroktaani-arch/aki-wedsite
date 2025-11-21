@@ -6,6 +6,18 @@
     <title>Aligned Layout</title>
 
 <style>
+    @media screen and (orientation: portrait) {
+    body {
+        transform: rotate(90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
     body {
         background-image: url("back.png");
         background-size: cover;
@@ -108,4 +120,5 @@
 </div>
 
 </body>
+
 </html>
