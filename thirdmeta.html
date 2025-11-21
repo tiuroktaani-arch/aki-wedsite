@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligned Layout</title>
+
+<style>
+    body {
+        background-image: url("back.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Main grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+        place-items: center;
+    }
+
+    /* Responsive images */
+    .pic {
+        width: 100%;
+        max-width: 200px;
+        aspect-ratio: 7/6;
+        object-fit: cover;
+        border-radius: 40px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .arrow {
+        width: 100%;
+        max-width: 100px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    /* Floating effect */
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
+
+    /* MOBILE FIXES */
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .pic {
+            max-width: 150px;
+        }
+
+        .arrow {
+            max-width: 80px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+
+        .pic {
+            max-width: 200px;
+        }
+
+        .arrow {
+            max-width: 70px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="grid">
+   <a href="fourthmeta.html" target="_blank">
+     <img src="leslie (10).jpg" class="pic">
+   </a>
+
+   <a href="fifthmeta.html" target="_blank">
+     <img src="leslie (11).jpg" class="pic">
+   </a>
+
+   <a href="sixthmeta.html" target="_blank">
+     <img src="leslie (8).jpg" class="pic">
+   </a>
+</div>
+
+<div class="grid">
+    <img src="ChatGPT Image Nov 20, 2025, 11_19_04 PM.png" class="arrow">
+    <img src="ChatGPT Image Nov 20, 2025, 11_19_04 PM.png" class="arrow">
+    <img src="ChatGPT Image Nov 20, 2025, 11_19_04 PM.png" class="arrow">
+</div>
+
+<div class="grid">
+    <img src="bastapic (1).jpg" class="pic">
+    <img src="bastapic (2).jpg" class="pic">
+    <img src="basta3.jpg" class="pic">
+</div>
+
+</body>
+</html>
